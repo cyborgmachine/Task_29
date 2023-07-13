@@ -26,16 +26,17 @@ User.prototype.sayHello = function() {
 }
 
 const user = new User('Sherlock', 27);
-console.log(user.sayHello()); // должно вывести "Hi. My name is Sherlock and I'm 27 years old"
+console.log(user.sayHello()); // має вивести "Hi. My name is Sherlock and I'm 27 years old"
 
 
 // 3
-const calculator = function(init = 1) {
+const calculator = function(init = 0) {
   return function () {
-    return init++;
+    return ++init;
   }
 }
 
 const c = calculator();
-console.log(c()); // должно вывести 1
-console.log(c()); // должно вывести 2
+console.log(c()); // має вивести 1
+console.log(c()); // має вивести 2
+
